@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+httpx
+azure-identity
+pydantic
+aiohttp
+azure-monitor-opentelemetry
+azure-cosmos

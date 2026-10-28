@@ -1,0 +1,354 @@
+[
+  {
+    "member_id": "MBR-DEMO-000101",
+    "synthetic": true,
+    "data_source": "call-center-demo-synth-v1",
+    "first_name": "Alicia",
+    "last_name": "Renner",
+    "dob": "1962-04-06",
+    "plan_id": "PLAN-PPO-GOLD-01",
+    "plan_name": "Gold PPO",
+    "enrollment_status": "ACTIVE",
+    "pcp_provider_id": "PRV-DEMO-2002",
+    "contact": {
+      "phone": "555-0101-0001",
+      "email": "alicia.demo1@example-demo.test"
+    }
+  },
+  {
+    "member_id": "MBR-DEMO-000102",
+    "synthetic": true,
+    "data_source": "call-center-demo-synth-v1",
+    "first_name": "Marcus",
+    "last_name": "Okafor",
+    "dob": "1969-07-11",
+    "plan_id": "PLAN-HMO-SILVER-02",
+    "plan_name": "Silver HMO",
+    "enrollment_status": "ACTIVE",
+    "pcp_provider_id": "PRV-DEMO-2003",
+    "contact": {
+      "phone": "555-0102-0002",
+      "email": "marcus.demo2@example-demo.test"
+    }
+  },
+  {
+    "member_id": "MBR-DEMO-000103",
+    "synthetic": true,
+    "data_source": "call-center-demo-synth-v1",
+    "first_name": "Priya",
+    "last_name": "Deshmukh",
+    "dob": "1976-10-16",
+    "plan_id": "PLAN-PPO-BRONZE-03",
+    "plan_name": "Bronze PPO",
+    "enrollment_status": "ACTIVE",
+    "pcp_provider_id": "PRV-DEMO-2004",
+    "contact": {
+      "phone": "555-0103-0003",
+      "email": "priya.demo3@example-demo.test"
+    }
+  },
+  {
+    "member_id": "MBR-DEMO-000104",
+    "synthetic": true,
+    "data_source": "call-center-demo-synth-v1",
+    "first_name": "Devon",
+    "last_name": "Marsh",
+    "dob": "1983-01-21",
+    "plan_id": "PLAN-PPO-GOLD-01",
+    "plan_name": "Gold PPO",
+    "enrollment_status": "ACTIVE",
+    "pcp_provider_id": "PRV-DEMO-2005",
+    "contact": {
+      "phone": "555-0104-0004",
+      "email": "devon.demo4@example-demo.test"
+    }
+  },
+  {
+    "member_id": "MBR-DEMO-000105",
+    "synthetic": true,
+    "data_source": "call-center-demo-synth-v1",
+    "first_name": "Sofia",
+    "last_name": "Alvarez",
+    "dob": "1990-04-26",
+    "plan_id": "PLAN-HMO-SILVER-02",
+    "plan_name": "Silver HMO",
+    "enrollment_status": "ACTIVE",
+    "pcp_provider_id": "PRV-DEMO-2006",
+    "contact": {
+      "phone": "555-0105-0005",
+      "email": "sofia.demo5@example-demo.test"
+    }
+  },
+  {
+    "member_id": "MBR-DEMO-000106",
+    "synthetic": true,
+    "data_source": "call-center-demo-synth-v1",
+    "first_name": "Wei",
+    "last_name": "Chen",
+    "dob": "1997-07-03",
+    "plan_id": "PLAN-PPO-BRONZE-03",
+    "plan_name": "Bronze PPO",
+    "enrollment_status": "ACTIVE",
+    "pcp_provider_id": "PRV-DEMO-2007",
+    "contact": {
+      "phone": "555-0106-0006",
+      "email": "wei.demo6@example-demo.test"
+    }
+  },
+  {
+    "member_id": "MBR-DEMO-000107",
+    "synthetic": true,
+    "data_source": "call-center-demo-synth-v1",
+    "first_name": "Grace",
+    "last_name": "Whitfield",
+    "dob": "2004-10-08",
+    "plan_id": "PLAN-PPO-GOLD-01",
+    "plan_name": "Gold PPO",
+    "enrollment_status": "ACTIVE",
+    "pcp_provider_id": "PRV-DEMO-2008",
+    "contact": {
+      "phone": "555-0107-0007",
+      "email": "grace.demo7@example-demo.test"
+    }
+  },
+  {
+    "member_id": "MBR-DEMO-000108",
+    "synthetic": true,
+    "data_source": "call-center-demo-synth-v1",
+    "first_name": "Omar",
+    "last_name": "Haddad",
+    "dob": "1956-01-13",
+    "plan_id": "PLAN-HMO-SILVER-02",
+    "plan_name": "Silver HMO",
+    "enrollment_status": "ACTIVE",
+    "pcp_provider_id": "PRV-DEMO-2009",
+    "contact": {
+      "phone": "555-0108-0008",
+      "email": "omar.demo8@example-demo.test"
+    }
+  },
+  {
+    "member_id": "MBR-DEMO-000109",
+    "synthetic": true,
+    "data_source": "call-center-demo-synth-v1",
+    "first_name": "Nadia",
+    "last_name": "Kessler",
+    "dob": "1963-04-18",
+    "plan_id": "PLAN-PPO-BRONZE-03",
+    "plan_name": "Bronze PPO",
+    "enrollment_status": "ACTIVE",
+    "pcp_provider_id": "PRV-DEMO-2001",
+    "contact": {
+      "phone": "555-0109-0009",
+      "email": "nadia.demo9@example-demo.test"
+    }
+  },
+  {
+    "member_id": "MBR-DEMO-000110",
+    "synthetic": true,
+    "data_source": "call-center-demo-synth-v1",
+    "first_name": "Ethan",
+    "last_name": "Boone",
+    "dob": "1970-07-23",
+    "plan_id": "PLAN-PPO-GOLD-01",
+    "plan_name": "Gold PPO",
+    "enrollment_status": "ACTIVE",
+    "pcp_provider_id": "PRV-DEMO-2002",
+    "contact": {
+      "phone": "555-0110-0010",
+      "email": "ethan.demo10@example-demo.test"
+    }
+  },
+  {
+    "member_id": "MBR-DEMO-000111",
+    "synthetic": true,
+    "data_source": "call-center-demo-synth-v1",
+    "first_name": "Renata",
+    "last_name": "Ferreira",
+    "dob": "1977-10-28",
+    "plan_id": "PLAN-HMO-SILVER-02",
+    "plan_name": "Silver HMO",
+    "enrollment_status": "ACTIVE",
+    "pcp_provider_id": "PRV-DEMO-2003",
+    "contact": {
+      "phone": "555-0111-0011",
+      "email": "renata.demo11@example-demo.test"
+    }
+  },
+  {
+    "member_id": "MBR-DEMO-000112",
+    "synthetic": true,
+    "data_source": "call-center-demo-synth-v1",
+    "first_name": "Kwame",
+    "last_name": "Nakamura",
+    "dob": "1984-01-05",
+    "plan_id": "PLAN-PPO-BRONZE-03",
+    "plan_name": "Bronze PPO",
+    "enrollment_status": "ACTIVE",
+    "pcp_provider_id": "PRV-DEMO-2004",
+    "contact": {
+      "phone": "555-0112-0012",
+      "email": "kwame.demo12@example-demo.test"
+    }
+  },
+  {
+    "member_id": "MBR-DEMO-000113",
+    "synthetic": true,
+    "data_source": "call-center-demo-synth-v1",
+    "first_name": "Ines",
+    "last_name": "Voss",
+    "dob": "1991-04-10",
+    "plan_id": "PLAN-PPO-GOLD-01",
+    "plan_name": "Gold PPO",
+    "enrollment_status": "ACTIVE",
+    "pcp_provider_id": "PRV-DEMO-2005",
+    "contact": {
+      "phone": "555-0113-0013",
+      "email": "ines.demo13@example-demo.test"
+    }
+  },
+  {
+    "member_id": "MBR-DEMO-000114",
+    "synthetic": true,
+    "data_source": "call-center-demo-synth-v1",
+    "first_name": "Julian",
+    "last_name": "Larkin",
+    "dob": "1998-07-15",
+    "plan_id": "PLAN-HMO-SILVER-02",
+    "plan_name": "Silver HMO",
+    "enrollment_status": "ACTIVE",
+    "pcp_provider_id": "PRV-DEMO-2006",
+    "contact": {
+      "phone": "555-0114-0014",
+      "email": "julian.demo14@example-demo.test"
+    }
+  },
+  {
+    "member_id": "MBR-DEMO-000115",
+    "synthetic": true,
+    "data_source": "call-center-demo-synth-v1",
+    "first_name": "Farah",
+    "last_name": "Aziz",
+    "dob": "2005-10-20",
+    "plan_id": "PLAN-PPO-BRONZE-03",
+    "plan_name": "Bronze PPO",
+    "enrollment_status": "ACTIVE",
+    "pcp_provider_id": "PRV-DEMO-2007",
+    "contact": {
+      "phone": "555-0115-0015",
+      "email": "farah.demo15@example-demo.test"
+    }
+  },
+  {
+    "member_id": "MBR-DEMO-000116",
+    "synthetic": true,
+    "data_source": "call-center-demo-synth-v1",
+    "first_name": "Tobias",
+    "last_name": "Petrov",
+    "dob": "1957-01-25",
+    "plan_id": "PLAN-PPO-GOLD-01",
+    "plan_name": "Gold PPO",
+    "enrollment_status": "ACTIVE",
+    "pcp_provider_id": "PRV-DEMO-2008",
+    "contact": {
+      "phone": "555-0116-0016",
+      "email": "tobias.demo16@example-demo.test"
+    }
+  },
+  {
+    "member_id": "MBR-DEMO-000117",
+    "synthetic": true,
+    "data_source": "call-center-demo-synth-v1",
+    "first_name": "Amara",
+    "last_name": "Nwosu",
+    "dob": "1964-04-02",
+    "plan_id": "PLAN-HMO-SILVER-02",
+    "plan_name": "Silver HMO",
+    "enrollment_status": "ACTIVE",
+    "pcp_provider_id": "PRV-DEMO-2009",
+    "contact": {
+      "phone": "555-0117-0017",
+      "email": "amara.demo17@example-demo.test"
+    }
+  },
+  {
+    "member_id": "MBR-DEMO-000118",
+    "synthetic": true,
+    "data_source": "call-center-demo-synth-v1",
+    "first_name": "Leo",
+    "last_name": "Byrne",
+    "dob": "1971-07-07",
+    "plan_id": "PLAN-PPO-BRONZE-03",
+    "plan_name": "Bronze PPO",
+    "enrollment_status": "ACTIVE",
+    "pcp_provider_id": "PRV-DEMO-2001",
+    "contact": {
+      "phone": "555-0118-0018",
+      "email": "leo.demo18@example-demo.test"
+    }
+  },
+  {
+    "member_id": "MBR-DEMO-000119",
+    "synthetic": true,
+    "data_source": "call-center-demo-synth-v1",
+    "first_name": "Simone",
+    "last_name": "Kaur",
+    "dob": "1978-10-12",
+    "plan_id": "PLAN-PPO-GOLD-01",
+    "plan_name": "Gold PPO",
+    "enrollment_status": "ACTIVE",
+    "pcp_provider_id": "PRV-DEMO-2002",
+    "contact": {
+      "phone": "555-0119-0019",
+      "email": "simone.demo19@example-demo.test"
+    }
+  },
+  {
+    "member_id": "MBR-DEMO-000120",
+    "synthetic": true,
+    "data_source": "call-center-demo-synth-v1",
+    "first_name": "Hiro",
+    "last_name": "Solis",
+    "dob": "1985-01-17",
+    "plan_id": "PLAN-HMO-SILVER-02",
+    "plan_name": "Silver HMO",
+    "enrollment_status": "ACTIVE",
+    "pcp_provider_id": "PRV-DEMO-2003",
+    "contact": {
+      "phone": "555-0120-0020",
+      "email": "hiro.demo20@example-demo.test"
+    }
+  },
+  {
+    "member_id": "MBR-DEMO-000121",
+    "synthetic": true,
+    "data_source": "call-center-demo-synth-v1",
+    "first_name": "Delia",
+    "last_name": "Renner",
+    "dob": "1992-04-22",
+    "plan_id": "PLAN-PPO-BRONZE-03",
+    "plan_name": "Bronze PPO",
+    "enrollment_status": "ACTIVE",
+    "pcp_provider_id": "PRV-DEMO-2004",
+    "contact": {
+      "phone": "555-0121-0021",
+      "email": "delia.demo21@example-demo.test"
+    }
+  },
+  {
+    "member_id": "MBR-DEMO-000122",
+    "synthetic": true,
+    "data_source": "call-center-demo-synth-v1",
+    "first_name": "Anders",
+    "last_name": "Okafor",
+    "dob": "1999-07-27",
+    "plan_id": "PLAN-PPO-GOLD-01",
+    "plan_name": "Gold PPO",
+    "enrollment_status": "LAPSED",
+    "pcp_provider_id": "PRV-DEMO-2005",
+    "contact": {
+      "phone": "555-0122-0022",
+      "email": "anders.demo22@example-demo.test"
+    }
+  }
+]

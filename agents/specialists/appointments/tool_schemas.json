@@ -1,0 +1,49 @@
+[
+  {
+    "name": "lookup_patient",
+    "description": "Confirm the identity of the member on this call, optionally against their date of birth, before discussing appointment details. Always resolves the authenticated member - it cannot look up another member ID.",
+    "target": "patient_lookup_service",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "dob": {"type": "string", "description": "Date of birth YYYY-MM-DD, optional additional verification"}
+      },
+      "required": []
+    }
+  },
+  {
+    "name": "get_upcoming_appointments",
+    "description": "List the upcoming scheduled appointments for the member on this call. Takes no arguments - the member is bound from the authenticated session, not passed in.",
+    "target": "scheduling_service",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    }
+  },
+  {
+    "name": "reschedule_appointment",
+    "description": "Reschedule one of this member's existing appointments to a new date/time, subject to reschedule-eligibility policy (e.g. same-day changes are not self-service eligible). Only appointments belonging to the member on this call can be changed.",
+    "target": "scheduling_service",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "appointment_id": {"type": "string", "description": "The appointment ID, e.g. APT-DEMO-5501"},
+        "new_datetime": {"type": "string", "description": "New ISO-8601 date-time for the appointment"}
+      },
+      "required": ["appointment_id", "new_datetime"]
+    }
+  },
+  {
+    "name": "get_provider_info",
+    "description": "Look up a provider's specialty, network status, and location by provider ID. Directory data, not member-scoped.",
+    "target": "eligibility_service",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "provider_id": {"type": "string", "description": "The provider ID, e.g. PRV-DEMO-2001"}
+      },
+      "required": ["provider_id"]
+    }
+  }
+]

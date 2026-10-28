@@ -1,0 +1,23 @@
+[
+  {
+    "id": "appointment_lookup",
+    "name": "Appointment Lookup",
+    "description": "Confirm the member's identity and list their upcoming scheduled appointments.",
+    "tools_used": ["lookup_patient", "get_upcoming_appointments"],
+    "kb_used": false
+  },
+  {
+    "id": "rescheduling",
+    "name": "Rescheduling",
+    "description": "Reschedule an existing appointment when eligible, or explain the same-day/policy restriction when it isn't.",
+    "tools_used": ["reschedule_appointment"],
+    "kb_used": true
+  },
+  {
+    "id": "provider_lookup",
+    "name": "Provider Lookup",
+    "description": "Look up a provider's specialty, network status, and location.",
+    "tools_used": ["get_provider_info"],
+    "kb_used": false
+  }
+]

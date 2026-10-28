@@ -1,0 +1,40 @@
+{
+  "clean_paid_claim": [
+    "MBR-DEMO-000101",
+    "MBR-DEMO-000102",
+    "MBR-DEMO-000103",
+    "MBR-DEMO-000104",
+    "MBR-DEMO-000105"
+  ],
+  "denied_needs_appeal": [
+    "MBR-DEMO-000106",
+    "MBR-DEMO-000107",
+    "MBR-DEMO-000108"
+  ],
+  "in_review": [
+    "MBR-DEMO-000109",
+    "MBR-DEMO-000110"
+  ],
+  "multiple_claims_mixed": [
+    "MBR-DEMO-000111",
+    "MBR-DEMO-000112"
+  ],
+  "upcoming_appointment": [
+    "MBR-DEMO-000113",
+    "MBR-DEMO-000114",
+    "MBR-DEMO-000115",
+    "MBR-DEMO-000116"
+  ],
+  "needs_reschedule": [
+    "MBR-DEMO-000117",
+    "MBR-DEMO-000118",
+    "MBR-DEMO-000119"
+  ],
+  "no_upcoming_appointments": [
+    "MBR-DEMO-000120",
+    "MBR-DEMO-000121"
+  ],
+  "lapsed_enrollment": [
+    "MBR-DEMO-000122"
+  ]
+}

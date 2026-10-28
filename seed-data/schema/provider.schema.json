@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Provider",
+  "type": "object",
+  "required": ["provider_id", "synthetic", "data_source", "name", "npi", "specialty", "network_status"],
+  "properties": {
+    "provider_id": {"type": "string", "pattern": "^PRV-DEMO-[0-9]{4}$"},
+    "synthetic": {"const": true},
+    "data_source": {"const": "call-center-demo-synth-v1"},
+    "name": {"type": "string"},
+    "npi": {"type": "string", "pattern": "^99999[0-9]{5}$"},
+    "specialty": {"type": "string"},
+    "network_status": {"type": "string", "enum": ["IN_NETWORK", "OUT_OF_NETWORK"]},
+    "accepting_new_patients": {"type": "boolean"},
+    "locations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {"type": "string"},
+          "address": {"type": "string"}
+        }
+      }
+    }
+  }
+}

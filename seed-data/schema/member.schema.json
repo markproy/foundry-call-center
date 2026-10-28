@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Member",
+  "type": "object",
+  "required": ["member_id", "synthetic", "data_source", "first_name", "last_name", "dob", "plan_id", "plan_name", "enrollment_status"],
+  "properties": {
+    "member_id": {"type": "string", "pattern": "^MBR-DEMO-[0-9]{6}$"},
+    "synthetic": {"const": true},
+    "data_source": {"const": "call-center-demo-synth-v1"},
+    "first_name": {"type": "string"},
+    "last_name": {"type": "string"},
+    "dob": {"type": "string", "format": "date"},
+    "plan_id": {"type": "string"},
+    "plan_name": {"type": "string"},
+    "enrollment_status": {"type": "string", "enum": ["ACTIVE", "LAPSED"]},
+    "pcp_provider_id": {"type": "string"},
+    "contact": {
+      "type": "object",
+      "properties": {
+        "phone": {"type": "string"},
+        "email": {"type": "string"}
+      }
+    }
+  }
+}

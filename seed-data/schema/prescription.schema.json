@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Prescription",
+  "type": "object",
+  "required": ["prescription_id", "synthetic", "data_source", "member_id", "drug_name", "status", "refills_remaining"],
+  "properties": {
+    "prescription_id": {"type": "string", "pattern": "^RX-DEMO-[0-9]{5}$"},
+    "synthetic": {"const": true},
+    "data_source": {"const": "call-center-demo-synth-v1"},
+    "member_id": {"type": "string"},
+    "prescribing_provider_id": {"type": "string"},
+    "drug_name": {"type": "string"},
+    "dosage": {"type": "string"},
+    "status": {"type": "string", "enum": ["ACTIVE", "PENDING_PRIOR_AUTH", "PRIOR_AUTH_DENIED", "EXPIRED"]},
+    "prior_authorization_required": {"type": "boolean"},
+    "prior_authorization_status": {"type": ["string", "null"], "enum": ["NOT_REQUIRED", "PENDING", "APPROVED", "DENIED", null]},
+    "refills_remaining": {"type": "integer", "minimum": 0},
+    "last_filled_date": {"type": ["string", "null"], "format": "date"},
+    "next_refill_eligible_date": {"type": ["string", "null"], "format": "date"},
+    "formulary_tier": {"type": ["integer", "null"], "minimum": 1, "maximum": 4},
+    "pharmacy_name": {"type": "string"},
+    "pharmacy_phone": {"type": "string"}
+  }
+}

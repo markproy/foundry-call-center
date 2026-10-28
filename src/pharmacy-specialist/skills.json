@@ -1,0 +1,23 @@
+[
+  {
+    "id": "prescription_status_lookup",
+    "name": "Prescription Status Lookup",
+    "description": "Look up the status, refills remaining, and prior authorization state of a specific prescription or all prescriptions for a member.",
+    "tools_used": ["get_prescription_status", "search_prescriptions_by_member"],
+    "kb_used": false
+  },
+  {
+    "id": "refill_request",
+    "name": "Refill Request",
+    "description": "Request a refill for an active prescription, applying real eligibility rules (refills remaining, next eligible date, prior authorization status).",
+    "tools_used": ["request_refill"],
+    "kb_used": true
+  },
+  {
+    "id": "prior_authorization_status",
+    "name": "Prior Authorization Status",
+    "description": "Check whether a medication requires prior authorization, its current status, and explain what happens next if it was denied.",
+    "tools_used": ["check_prior_authorization"],
+    "kb_used": true
+  }
+]

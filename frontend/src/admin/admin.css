@@ -1,0 +1,58 @@
+.adm { font-family: system-ui, sans-serif; color: #111827; min-height: 100vh; background: #f9fafb; }
+.adm header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 16px; background: #fff; border-bottom: 1px solid #e5e7eb; }
+.adm h1 { font-size: 17px; margin: 0; }
+.adm h2 { font-size: 15px; margin: 22px 0 8px; }
+.adm h2 small { font-weight: 400; color: #6b7280; }
+.adm nav { display: flex; gap: 4px; }
+.adm nav button { background: #fff; color: #374151; border: 1px solid #d1d5db; padding: 6px 12px; }
+.adm nav button.active { background: #2563eb; color: #fff; border-color: #2563eb; }
+.adm button.link { background: none; color: #2563eb; padding: 2px 6px; border: 0; }
+.adm.login { max-width: 360px; margin: 80px auto; display: flex; flex-direction: column; gap: 12px; background: transparent; }
+.adm.login form { display: flex; gap: 8px; }
+.pad { padding: 16px; }
+.err { color: #b91c1c; }
+.muted { color: #9ca3af; }
+.toolbar { display: flex; gap: 10px; align-items: center; margin-bottom: 10px; flex-wrap: wrap; }
+.toolbar input[type=text], .toolbar input:not([type]) { padding: 5px 8px; flex: initial; width: 170px; }
+.stats { display: flex; flex-wrap: wrap; gap: 10px; }
+.stat { background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 10px 14px; min-width: 140px; }
+.stat.bad { border-color: #fca5a5; background: #fef2f2; }
+.stat .v { font-size: 20px; font-weight: 600; }
+.stat .l { font-size: 12px; color: #6b7280; }
+.stat .s { font-size: 11px; color: #9ca3af; }
+.adm table { width: 100%; border-collapse: collapse; background: #fff; font-size: 13px; }
+.adm th, .adm td { text-align: left; padding: 6px 8px; border-bottom: 1px solid #f3f4f6; }
+.adm th { color: #6b7280; font-weight: 500; }
+.adm tbody tr { cursor: pointer; }
+.adm tbody tr:hover, .adm tr.sel { background: #eff6ff; }
+.adm tr.failrow td { background: #fef2f2; }
+.adm td.msg { max-width: 280px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.adm td.expand { background: #f9fafb; cursor: default; }
+.answer { white-space: pre-wrap; background: #fff; border: 1px solid #e5e7eb; border-radius: 6px; padding: 8px; }
+.bars { display: flex; align-items: flex-end; gap: 3px; height: 90px; background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 8px; }
+.bar { flex: 1; height: 100%; display: flex; align-items: flex-end; max-width: 28px; }
+.bar.clickable { cursor: pointer; }
+.bar.selbar .fill { background: #1d4ed8; }
+.bar .fill { width: 100%; background: #93c5fd; display: flex; align-items: flex-end; min-height: 2px; }
+.bar .errfill { width: 100%; background: #ef4444; }
+.hbar { display: flex; align-items: center; gap: 8px; font-size: 13px; margin: 3px 0; }
+.hbar .name { width: 260px; }
+.track { flex: 1; position: relative; height: 14px; background: #f3f4f6; border-radius: 3px; }
+.hbar .track span { display: block; height: 100%; background: #60a5fa; border-radius: 3px; }
+.hbar .n, .wf .n { width: 60px; text-align: right; color: #6b7280; font-size: 12px; }
+.split { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
+.split:has(.detail) { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.detail { background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px; align-self: start; position: sticky; top: 8px; }
+.convo { display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px; font-size: 13px; }
+.convo .u, .convo .a { padding: 6px 10px; border-radius: 8px; white-space: pre-wrap; }
+.convo .u { background: #dbeafe; }
+.convo .a { background: #f3f4f6; }
+.wf .row { display: flex; align-items: center; gap: 8px; font-size: 12px; margin: 3px 0; }
+.wf .name { width: 210px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex-shrink: 0; }
+.wf .name small { color: #9ca3af; }
+.wf .span { position: absolute; top: 2px; height: 10px; border-radius: 2px; background: #9ca3af; }
+.wf .span.k-turn { background: #6366f1; }
+.wf .span.k-stage { background: #2563eb; }
+.wf .span.fail { background: #ef4444; }
+pre { font-size: 11px; background: #f3f4f6; padding: 8px; overflow: auto; }
+a.adminlink { font-size: 12px; font-weight: 400; margin-left: 10px; color: #6b7280; }

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "intent_routing",
+    "name": "Intent Routing",
+    "description": "Classify an incoming member message as claims, appointments, pharmacy, or out_of_scope and delegate to the correct specialist agent.",
+    "tools_used": [],
+    "kb_used": false
+  },
+  {
+    "id": "out_of_scope_redirect",
+    "name": "Out-of-Scope Redirect",
+    "description": "Recognize medical, legal, or financial advice requests and general off-topic chat, and redirect the member without calling a specialist.",
+    "tools_used": [],
+    "kb_used": false
+  }
+]

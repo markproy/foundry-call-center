@@ -1,0 +1,105 @@
+{
+  "version": "Notebook/1.0",
+  "items": [
+    {
+      "type": 1,
+      "content": { "json": "## Foundry Call Center - operations\nSource: Application Insights spans emitted by the chat backend (`chat_turn`, `classify`, `specialist`). Message content is never recorded. Cost uses gpt-4.1-mini list prices ($0.40 / $1.60 per 1M input / output tokens); adjust the KQL if the deployment changes." },
+      "name": "intro"
+    },
+    {
+      "type": 9,
+      "content": {
+        "version": "KqlParameterItem/1.0",
+        "parameters": [
+          {
+            "id": "a1", "version": "KqlParameterItem/1.0", "name": "TimeRange", "label": "Time range", "type": 4,
+            "isRequired": true,
+            "value": { "durationMs": 86400000 },
+            "typeSettings": { "selectableValues": [
+              { "durationMs": 3600000 }, { "durationMs": 86400000 }, { "durationMs": 604800000 }
+            ] }
+          }
+        ]
+      },
+      "name": "params"
+    },
+    {
+      "type": 3,
+      "content": {
+        "version": "KqlItem/1.0",
+        "title": "Health: turns, errors, guardrail blocks",
+        "query": "dependencies | where name == 'chat_turn' | summarize Turns = count(), Errors = countif(success == false), GuardrailBlocks = countif(tostring(customDimensions.guardrail) != ''), ErrorRatePct = round(100.0 * countif(success == false) / count(), 1) by bin(timestamp, 1h) | order by timestamp asc",
+        "size": 1, "timeContextFromParameter": "TimeRange", "queryType": 0,
+        "resourceType": "microsoft.insights/components", "visualization": "timechart"
+      },
+      "name": "health"
+    },
+    {
+      "type": 3,
+      "content": {
+        "version": "KqlItem/1.0",
+        "title": "Routing: intent mix",
+        "query": "dependencies | where name == 'chat_turn' | summarize Turns = count() by Intent = tostring(customDimensions.intent)",
+        "size": 1, "timeContextFromParameter": "TimeRange", "queryType": 0,
+        "resourceType": "microsoft.insights/components", "visualization": "piechart"
+      },
+      "name": "intents"
+    },
+    {
+      "type": 3,
+      "content": {
+        "version": "KqlItem/1.0",
+        "title": "Latency (ms): p50 / p95 by stage",
+        "query": "dependencies | where name == 'chat_turn' | extend classify = todouble(customDimensions.classify_ms), ttft = todouble(customDimensions.ttft_ms), total = todouble(customDimensions.total_ms) | summarize classify_p50 = percentile(classify, 50), classify_p95 = percentile(classify, 95), first_token_p50 = percentile(ttft, 50), first_token_p95 = percentile(ttft, 95), total_p50 = percentile(total, 50), total_p95 = percentile(total, 95) by bin(timestamp, 1h) | order by timestamp asc",
+        "size": 0, "timeContextFromParameter": "TimeRange", "queryType": 0,
+        "resourceType": "microsoft.insights/components", "visualization": "timechart"
+      },
+      "name": "latency"
+    },
+    {
+      "type": 3,
+      "content": {
+        "version": "KqlItem/1.0",
+        "title": "Tool use (specialist calls)",
+        "query": "dependencies | where name == 'specialist' | extend Tool = split(tostring(customDimensions.tools), ',') | mv-expand Tool to typeof(string) | where isnotempty(Tool) | summarize Calls = count() by Agent = tostring(customDimensions.agent), Tool | order by Calls desc",
+        "size": 1, "timeContextFromParameter": "TimeRange", "queryType": 0,
+        "resourceType": "microsoft.insights/components", "visualization": "barchart"
+      },
+      "name": "tools"
+    },
+    {
+      "type": 3,
+      "content": {
+        "version": "KqlItem/1.0",
+        "title": "Cost: tokens and estimated USD per day",
+        "query": "dependencies | where name == 'chat_turn' | extend inTok = todouble(customDimensions.orchestrator_input_tokens) + todouble(customDimensions.specialist_input_tokens), outTok = todouble(customDimensions.orchestrator_output_tokens) + todouble(customDimensions.specialist_output_tokens) | summarize InputTokens = sum(inTok), OutputTokens = sum(outTok), Turns = count() by Day = bin(timestamp, 1d) | extend EstUSD = round(InputTokens * 0.40 / 1000000 + OutputTokens * 1.60 / 1000000, 4), EstUSDPerTurn = round((InputTokens * 0.40 + OutputTokens * 1.60) / 1000000 / Turns, 5) | order by Day asc",
+        "size": 1, "timeContextFromParameter": "TimeRange", "queryType": 0,
+        "resourceType": "microsoft.insights/components", "visualization": "table"
+      },
+      "name": "cost"
+    },
+    {
+      "type": 3,
+      "content": {
+        "version": "KqlItem/1.0",
+        "title": "Failures by stage",
+        "query": "dependencies | where name in ('classify', 'specialist') and success == false | summarize Failures = count() by Stage = name, Agent = tostring(customDimensions.agent), ErrorType = tostring(customDimensions.error_type)",
+        "size": 1, "timeContextFromParameter": "TimeRange", "queryType": 0,
+        "resourceType": "microsoft.insights/components", "visualization": "table"
+      },
+      "name": "failures"
+    },
+    {
+      "type": 3,
+      "content": {
+        "version": "KqlItem/1.0",
+        "title": "Slowest recent turns (use operation_Id to open the end-to-end trace)",
+        "query": "dependencies | where name == 'chat_turn' | project timestamp, operation_Id, member = tostring(customDimensions.member_id), intent = tostring(customDimensions.intent), agent = tostring(customDimensions.agent), tools = tostring(customDimensions.tools), total_ms = todouble(customDimensions.total_ms), success | top 25 by total_ms desc",
+        "size": 0, "timeContextFromParameter": "TimeRange", "queryType": 0,
+        "resourceType": "microsoft.insights/components", "visualization": "table"
+      },
+      "name": "slowest"
+    }
+  ],
+  "$schema": "https://github.com/Microsoft/Application-Insights-Workbooks/blob/master/schema/workbook.json"
+}

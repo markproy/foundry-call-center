@@ -1,0 +1,28 @@
+.claude/
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.venv*/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# Node / frontend
+node_modules/
+dist/
+.vite/
+*.local
+tsconfig.tsbuildinfo
+
+# Misc
+seed-data/fixtures/*.generated.json
+.env
+.env.*
+tmp-secrets.txt
+
+# azd / secrets
+.azure/
+.env
+eval/results/

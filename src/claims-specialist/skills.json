@@ -1,0 +1,23 @@
+[
+  {
+    "id": "claim_status_lookup",
+    "name": "Claim Status Lookup",
+    "description": "Look up the status, amounts, and denial reason (if any) of a specific claim or all claims for a member.",
+    "tools_used": ["get_claim_status", "search_claims_by_member"],
+    "kb_used": true
+  },
+  {
+    "id": "appeal_guidance",
+    "name": "Appeal Guidance",
+    "description": "Explain why a claim was denied in plain language and walk a member through appeal eligibility, deadlines, and next steps.",
+    "tools_used": ["get_appeal_info"],
+    "kb_used": true
+  },
+  {
+    "id": "eligibility_check",
+    "name": "Eligibility Check",
+    "description": "Confirm a member's enrollment status and plan before discussing claim details.",
+    "tools_used": ["check_eligibility"],
+    "kb_used": false
+  }
+]

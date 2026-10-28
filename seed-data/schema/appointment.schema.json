@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Appointment",
+  "type": "object",
+  "required": ["appointment_id", "synthetic", "data_source", "member_id", "provider_id", "scheduled_datetime", "status"],
+  "properties": {
+    "appointment_id": {"type": "string", "pattern": "^APT-DEMO-[0-9]{4}$"},
+    "synthetic": {"const": true},
+    "data_source": {"const": "call-center-demo-synth-v1"},
+    "member_id": {"type": "string"},
+    "provider_id": {"type": "string"},
+    "scheduled_datetime": {"type": "string", "format": "date-time"},
+    "type": {"type": "string"},
+    "modality": {"type": "string", "enum": ["in_person", "telehealth"]},
+    "status": {"type": "string", "enum": ["SCHEDULED", "COMPLETED", "CANCELLED"]},
+    "location": {"type": "string"},
+    "reschedule_eligible": {"type": "boolean"},
+    "reschedule_notes": {"type": ["string", "null"]}
+  }
+}

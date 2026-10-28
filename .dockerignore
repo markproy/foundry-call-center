@@ -1,0 +1,13 @@
+.azure
+.git
+**/node_modules
+**/__pycache__
+**/.venv
+seed-data
+tools
+agents
+docs
+eval
+src/*-specialist
+src/orchestrator
+frontend/dist

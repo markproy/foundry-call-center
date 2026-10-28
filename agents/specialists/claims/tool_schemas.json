@@ -1,0 +1,46 @@
+[
+  {
+    "name": "get_claim_status",
+    "description": "Look up a single claim by its claim ID and return its current status, amounts, and (if denied) the denial reason code. Only claims belonging to the member on this call can be read.",
+    "target": "claims_service",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "claim_id": {"type": "string", "description": "The claim ID, e.g. CLM-DEMO-10045"}
+      },
+      "required": ["claim_id"]
+    }
+  },
+  {
+    "name": "search_claims_by_member",
+    "description": "List all claims on file for the member on this call, most recent first. Takes no arguments - the member is bound from the authenticated session, not passed in.",
+    "target": "claims_service",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    }
+  },
+  {
+    "name": "get_appeal_info",
+    "description": "For a denied claim, return whether it is eligible for appeal, the appeal deadline, and current appeal status. Only claims belonging to the member on this call can be read.",
+    "target": "claims_service",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "claim_id": {"type": "string", "description": "The claim ID, e.g. CLM-DEMO-10045"}
+      },
+      "required": ["claim_id"]
+    }
+  },
+  {
+    "name": "check_eligibility",
+    "description": "Check the current enrollment status and plan of the member on this call, to confirm they are eligible for the claim being discussed. Takes no arguments - the member is bound from the authenticated session, not passed in.",
+    "target": "eligibility_service",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    }
+  }
+]

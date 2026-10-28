@@ -1,0 +1,48 @@
+[
+  {
+    "name": "get_prescription_status",
+    "description": "Look up a single prescription by its ID and return its current status, refills remaining, and prior authorization state. Only prescriptions belonging to the member on this call can be read.",
+    "target": "pharmacy_service",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "prescription_id": {"type": "string", "description": "The prescription ID, e.g. RX-DEMO-50000"}
+      },
+      "required": ["prescription_id"]
+    }
+  },
+  {
+    "name": "search_prescriptions_by_member",
+    "description": "List all prescriptions on file for the member on this call. Takes no arguments - the member is bound from the authenticated session, not passed in.",
+    "target": "pharmacy_service",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    }
+  },
+  {
+    "name": "request_refill",
+    "description": "Request a refill for a prescription. Subject to real eligibility rules (refills remaining, next eligible date, prior authorization status) - the tool applies them and returns whether the refill is approved, not just the raw record. Only prescriptions belonging to the member on this call can be refilled.",
+    "target": "pharmacy_service",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "prescription_id": {"type": "string", "description": "The prescription ID, e.g. RX-DEMO-50000"}
+      },
+      "required": ["prescription_id"]
+    }
+  },
+  {
+    "name": "check_prior_authorization",
+    "description": "Check whether a prescription requires prior authorization and, if so, its current authorization status. Only prescriptions belonging to the member on this call can be read.",
+    "target": "pharmacy_service",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "prescription_id": {"type": "string", "description": "The prescription ID, e.g. RX-DEMO-50000"}
+      },
+      "required": ["prescription_id"]
+    }
+  }
+]

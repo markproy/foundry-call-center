@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Claim",
+  "type": "object",
+  "required": ["claim_id", "synthetic", "data_source", "member_id", "provider_id", "date_of_service", "status", "billed_amount"],
+  "properties": {
+    "claim_id": {"type": "string", "pattern": "^CLM-DEMO-[0-9]{5}$"},
+    "synthetic": {"const": true},
+    "data_source": {"const": "call-center-demo-synth-v1"},
+    "member_id": {"type": "string"},
+    "provider_id": {"type": "string"},
+    "date_of_service": {"type": "string", "format": "date"},
+    "status": {"type": "string", "enum": ["PAID", "DENIED", "IN_REVIEW"]},
+    "denial_reason_code": {"type": ["string", "null"], "enum": ["CO-197", "CO-B7", "CO-96", null]},
+    "denial_reason_text": {"type": ["string", "null"]},
+    "billed_amount": {"type": "number"},
+    "allowed_amount": {"type": "number"},
+    "member_responsibility": {"type": "number"},
+    "service_description": {"type": "string"},
+    "appeal_deadline": {"type": ["string", "null"], "format": "date"},
+    "appeal_status": {"type": ["string", "null"], "enum": ["NOT_FILED", "FILED", "APPROVED", "REJECTED", null]}
+  }
+}

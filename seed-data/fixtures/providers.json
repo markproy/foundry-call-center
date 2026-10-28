@@ -1,0 +1,146 @@
+[
+  {
+    "provider_id": "PRV-DEMO-2001",
+    "synthetic": true,
+    "data_source": "call-center-demo-synth-v1",
+    "name": "Dr. Devon Whitfield",
+    "npi": "9999900000",
+    "specialty": "Internal Medicine",
+    "network_status": "IN_NETWORK",
+    "accepting_new_patients": false,
+    "locations": [
+      {
+        "name": "Harborview Medical Plaza",
+        "address": "100 Demo Ave, Springfield, ST 50000"
+      }
+    ]
+  },
+  {
+    "provider_id": "PRV-DEMO-2002",
+    "synthetic": true,
+    "data_source": "call-center-demo-synth-v1",
+    "name": "Dr. Nadia Nwosu",
+    "npi": "9999900001",
+    "specialty": "Orthopedics",
+    "network_status": "IN_NETWORK",
+    "accepting_new_patients": true,
+    "locations": [
+      {
+        "name": "Lakeview Medical Plaza",
+        "address": "107 Demo Ave, Springfield, ST 50001"
+      }
+    ]
+  },
+  {
+    "provider_id": "PRV-DEMO-2003",
+    "synthetic": true,
+    "data_source": "call-center-demo-synth-v1",
+    "name": "Dr. Omar Petrov",
+    "npi": "9999900002",
+    "specialty": "Cardiology",
+    "network_status": "IN_NETWORK",
+    "accepting_new_patients": true,
+    "locations": [
+      {
+        "name": "Lakeview Medical Plaza",
+        "address": "114 Demo Ave, Springfield, ST 50002"
+      }
+    ]
+  },
+  {
+    "provider_id": "PRV-DEMO-2004",
+    "synthetic": true,
+    "data_source": "call-center-demo-synth-v1",
+    "name": "Dr. Alicia Kessler",
+    "npi": "9999900003",
+    "specialty": "Dermatology",
+    "network_status": "IN_NETWORK",
+    "accepting_new_patients": false,
+    "locations": [
+      {
+        "name": "Cedar Hill Medical Plaza",
+        "address": "121 Demo Ave, Springfield, ST 50003"
+      }
+    ]
+  },
+  {
+    "provider_id": "PRV-DEMO-2005",
+    "synthetic": true,
+    "data_source": "call-center-demo-synth-v1",
+    "name": "Dr. Tobias Nwosu",
+    "npi": "9999900004",
+    "specialty": "Physical Therapy",
+    "network_status": "OUT_OF_NETWORK",
+    "accepting_new_patients": true,
+    "locations": [
+      {
+        "name": "Cedar Hill Medical Plaza",
+        "address": "128 Demo Ave, Springfield, ST 50004"
+      }
+    ]
+  },
+  {
+    "provider_id": "PRV-DEMO-2006",
+    "synthetic": true,
+    "data_source": "call-center-demo-synth-v1",
+    "name": "Dr. Omar Byrne",
+    "npi": "9999900005",
+    "specialty": "OB/GYN",
+    "network_status": "IN_NETWORK",
+    "accepting_new_patients": true,
+    "locations": [
+      {
+        "name": "Cedar Hill Medical Plaza",
+        "address": "135 Demo Ave, Springfield, ST 50005"
+      }
+    ]
+  },
+  {
+    "provider_id": "PRV-DEMO-2007",
+    "synthetic": true,
+    "data_source": "call-center-demo-synth-v1",
+    "name": "Dr. Marcus Alvarez",
+    "npi": "9999900006",
+    "specialty": "Behavioral Health",
+    "network_status": "IN_NETWORK",
+    "accepting_new_patients": false,
+    "locations": [
+      {
+        "name": "Riverside Medical Plaza",
+        "address": "142 Demo Ave, Springfield, ST 50006"
+      }
+    ]
+  },
+  {
+    "provider_id": "PRV-DEMO-2008",
+    "synthetic": true,
+    "data_source": "call-center-demo-synth-v1",
+    "name": "Dr. Kwame Boone",
+    "npi": "9999900007",
+    "specialty": "Endocrinology",
+    "network_status": "IN_NETWORK",
+    "accepting_new_patients": true,
+    "locations": [
+      {
+        "name": "Harborview Medical Plaza",
+        "address": "149 Demo Ave, Springfield, ST 50007"
+      }
+    ]
+  },
+  {
+    "provider_id": "PRV-DEMO-2009",
+    "synthetic": true,
+    "data_source": "call-center-demo-synth-v1",
+    "name": "Dr. Anders Okafor",
+    "npi": "9999900008",
+    "specialty": "Internal Medicine",
+    "network_status": "IN_NETWORK",
+    "accepting_new_patients": true,
+    "locations": [
+      {
+        "name": "Lakeview Medical Plaza",
+        "address": "156 Demo Ave, Springfield, ST 50008"
+      }
+    ]
+  }
+]
